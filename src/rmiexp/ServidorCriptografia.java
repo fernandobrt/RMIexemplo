@@ -9,25 +9,23 @@ package rmiexp;
  *
  * @author fbrito
  */
-
 import java.rmi.Naming;
 
 public class ServidorCriptografia {
 
-public ServidorCriptografia(){
+    public ServidorCriptografia() {
 
-try{
-CriptografiaImpl obj= new CriptografiaImpl();
-Naming.rebind("//localhost/criptoService", obj);
-}
-catch (Exception e ){
-system.out.println("Erro:"+ e);
-}
-}
+        try {
+            CriptografiaImpl obj = new CriptografiaImpl();
+            Naming.rebind("//localhost/criptoService", obj);
+        } catch (Exception e) {
+            System.out.println("Erro:" + e);
+        }
+    }
 
-public static void main (String[] args){
+    public static void main(String[] args) {
 
-new ServidorCriptografia();
+        new ServidorCriptografia();
 
-}
+    }
 }
