@@ -24,7 +24,7 @@ public class ClienteCriptografia {
         int opcao = JOptionPane.showConfirmDialog(null, "Sim = criptografia" + "\nNao= Descriptgrafar ", "Escolha uma opçao", 0);
 
         try {
-            Criptografia cripto = (Criptografia) Naming.lookup("//localhost/" + "criptoService");
+            Criptografia cripto = (Criptografia) Naming.lookup("//localhost:2020/" + "criptoService");
             if (opcao == 0) {
                 a = JOptionPane.showInputDialog("entre com o TEXTO:  sem acento");
                 resp = cripto.criptografar(a);
