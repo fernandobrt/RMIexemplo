@@ -19,7 +19,7 @@ public class ServidorCriptografia {
             CriptografiaImpl obj = new CriptografiaImpl();
             Naming.rebind("//localhost:2020/criptoService", obj);
         } catch (Exception e) {
-            System.out.println("Erro:" + e);
+            System.err.print(e);
         }
     }
 
