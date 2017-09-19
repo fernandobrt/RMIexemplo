@@ -21,7 +21,7 @@ public class ClienteCriptografia {
     public static void main(String[] args) {
 
         String a, resp = "";
-        int opcao = JOptionPane.showConfirmDialog(null, "Sim = criptografia" + "\nNao= deografia ", "Escolha uma opçao", 0);
+        int opcao = JOptionPane.showConfirmDialog(null, "Sim = criptografia" + "\nNao= Descriptgrafar ", "Escolha uma opçao", 0);
 
         try {
             Criptografia cripto = (Criptografia) Naming.lookup("//localhost/" + "criptoService");
