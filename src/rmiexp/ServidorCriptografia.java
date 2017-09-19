@@ -10,14 +10,16 @@ package rmiexp;
  * @author fbrito
  */
 import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
 
 public class ServidorCriptografia {
 
     public ServidorCriptografia() {
 
         try {
+            LocateRegistry.createRegistry(2021);
             CriptografiaImpl obj = new CriptografiaImpl();
-            Naming.rebind("//localhost:2020/criptoService", obj);
+            Naming.rebind("//localhost:2021/criptoService", obj);
         } catch (Exception e) {
             System.err.print(e);
         }
@@ -29,3 +31,4 @@ public class ServidorCriptografia {
 
     }
 }
+
